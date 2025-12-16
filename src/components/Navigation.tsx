@@ -49,7 +49,7 @@ export function Navigation() {
   return (
     <div className="fixed  bottom-0 inset-x-0 py-1">
       <TooltipProvider>
-        <Dock direction="middle" className="mb-2">
+        <Dock direction="middle" className="mb-2 rounded-full">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
