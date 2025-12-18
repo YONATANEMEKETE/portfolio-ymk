@@ -1,6 +1,6 @@
 import { Github, Gmail, LinkedIn, Telegram } from '@/components/icons/icons';
 import { link } from 'fs';
-import { GithubIcon, Globe, HomeIcon } from 'lucide-react';
+import { GithubIcon, Globe, HomeIcon, LinkedinIcon } from 'lucide-react';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
     image: '/zulu.jpg',
     links: [
       {
-        icon: <LinkedIn />,
+        icon: <LinkedinIcon />,
         title: 'LinkedIn',
         href: 'https://www.linkedin.com/company/zulu-software/posts/?feedView=all',
       },
@@ -65,7 +65,7 @@ export const experiences: Experience[] = [
     image: '/ablaze.jpg',
     links: [
       {
-        icon: <LinkedIn />,
+        icon: <LinkedinIcon />,
         title: 'LinkedIn',
         href: 'https://www.linkedin.com/company/ablazelabs/posts/?feedView=all',
       },
