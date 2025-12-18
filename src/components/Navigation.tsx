@@ -18,27 +18,27 @@ import { Github, Gmail, LinkedIn, Telegram } from './icons/icons';
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const DATA = {
-  navbar: [{ href: '#', icon: HomeIcon, label: 'Home' }],
+  navbar: [{ href: '#hero', icon: HomeIcon, label: 'Home' }],
   contact: {
     social: {
       GitHub: {
         name: 'GitHub',
-        url: '#',
+        url: 'https://github.com/YONATANEMEKETE',
         icon: Github,
       },
       LinkedIn: {
         name: 'LinkedIn',
-        url: '#',
+        url: 'https://www.linkedin.com/in/yonatanemekete/',
         icon: LinkedIn,
       },
       Telegram: {
         name: 'Telegram',
-        url: '#',
+        url: 'https://t.me/yonatanemekete',
         icon: Telegram,
       },
       Email: {
         name: 'Email',
-        url: '#',
+        url: 'mailto:yonatanemekete22@gmail.com',
         icon: Gmail,
       },
     },

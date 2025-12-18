@@ -128,3 +128,7 @@
 .font-mona-sans {
   font-family: var(--font-mona-sans);
 }
+
+html {
+  scroll-behavior: smooth;
+}

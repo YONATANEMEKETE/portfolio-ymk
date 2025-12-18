@@ -30,8 +30,8 @@ const Hero = ({ delay }: Props) => {
           </BlurFade>
           <BlurFade delay={delay * 2}>
             <p className="min-[500px]:text-base text-sm text-textlighter font-medium min-[500px]:max-w-100 max-w-75 mx-auto">
-              Frontend developer focused on creating responsive, user-friendly
-              interfaces.
+              Senior Frontend Developer focused on performance, scalability, and
+              clean frontend architecture.
             </p>
           </BlurFade>
         </div>

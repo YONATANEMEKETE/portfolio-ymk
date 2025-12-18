@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface Props {
   title: string;
-  description: string;
+  bulletPoints: string[];
   dates: string;
   location: string;
   image?: string;
@@ -17,7 +17,7 @@ interface Props {
 
 export function ExperienceCard({
   title,
-  description,
+  bulletPoints,
   dates,
   location,
   image,
@@ -39,10 +39,12 @@ export function ExperienceCard({
         {location && (
           <p className="text-sm text-muted-foreground">{location}</p>
         )}
-        {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground">
-            {description}
-          </span>
+        {bulletPoints && bulletPoints.length > 0 && (
+          <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+            {bulletPoints.map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
+          </ul>
         )}
       </div>
       {links && links.length > 0 && (

@@ -29,7 +29,7 @@ export const navs = [
 
 interface Experience {
   title: string;
-  description: string;
+  bulletPoints: string[];
   dates: string;
   location: string;
   image?: string;
@@ -43,8 +43,14 @@ interface Experience {
 export const experiences: Experience[] = [
   {
     title: 'Senior Frontend Developer – Zulu Tech',
-    description:
-      'Leading frontend development for a large-scale web application using Next.js, Tailwind CSS, Shadcn, Redux Toolkit, and more. Built complex user interfaces, implemented client-side logic, API integration, state management, and animations. Worked across the full product lifecycle, from design handoff to performance optimization.',
+    bulletPoints: [
+      'Led frontend development of a large-scale production web application using Next.js, Tailwind CSS, Shadcn UI, and Redux Toolkit',
+      'Built complex, data-driven user interfaces with robust client-side logic, API integrations, and state management',
+      'Translated design handoffs into scalable, reusable component architecture',
+      'Implemented animations and micro-interactions to enhance UX while maintaining accessibility and responsiveness',
+      'Collaborated closely with backend engineers and designers across the entire product lifecycle',
+      'Optimized performance and code quality to ensure maintainability and production readiness',
+    ],
     dates: 'Mar 2025 - July 2025',
     location: 'Remote',
     image: '/zulu.jpg',
@@ -58,8 +64,14 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Frontend Developer – Ablaze Labs',
-    description:
-      'Built a multilingual, interactive government web portal to communicate ministerial activities. Focused on UI development, backend integration, and delivering animated, accessible interfaces. Collaborated with designers and engineers to ensure visual consistency and usability.',
+    bulletPoints: [
+      'Developed a multilingual government web portal to communicate ministerial activities to the public',
+      'Built responsive, accessible UI components with a strong focus on usability and consistency',
+      'Integrated frontend features with backend services to support dynamic, real-time content',
+      'Implemented animated and interactive UI elements to improve user engagement',
+      'Worked closely with designers and engineers to ensure accurate visual implementation and UX quality',
+      'Ensured cross-device and cross-language compatibility',
+    ],
     dates: 'Nov 2024 – Feb 2025',
     location: 'Addis Ababa',
     image: '/ablaze.jpg',
@@ -73,8 +85,14 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Frontend Developer (Freelance)',
-    description:
-      'Worked on multiple SaaS applications, delivering end-to-end frontend solutions—from building UI to integrating backend APIs. Delivered conversion-focused user experiences with clean design and intuitive animations. Collaborated with clients to translate business requirements into high-impact features.',
+    bulletPoints: [
+      'Delivered end-to-end frontend solutions for SaaS and web applications using React and Next.js',
+      'Designed and implemented reusable UI components and scalable frontend architectures',
+      'Integrated REST APIs and handled client-side state, forms, and user flows',
+      'Built conversion-focused interfaces with clean layouts and intuitive animations',
+      'Collaborated directly with clients to translate business requirements into technical solutions',
+      'Managed projects independently, from planning and development to delivery and iteration',
+    ],
     dates: 'Nov 2023 – Present',
     location: 'Remote',
   },
@@ -98,6 +116,12 @@ export const skills = [
   'GitHub',
   'Jest',
   'Cypress',
+  'Figma',
+  'React Hook Form',
+  'Jotai',
+  'TanStack Query',
+  'Zod',
+  'Progressive Web Apps (PWA)',
 ];
 
 export const projects = [
@@ -128,7 +152,7 @@ export const projects = [
       {
         icon: <GithubIcon />, // your icon component
         type: 'GitHub',
-        href: 'https://github.com/YOUR_USERNAME/resume-tailor-ai',
+        href: 'https://github.com/YONATANEMEKETE/ResumeTailor',
       },
     ],
   },

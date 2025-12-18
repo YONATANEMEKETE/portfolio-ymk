@@ -14,17 +14,16 @@ const About = ({ delay }: Props) => {
         </BlurFade>
         <BlurFade delay={delay * 2.75}>
           <p className="text-justify">
-            A passionate {''}
-            <span className="font-bold underline text-primary">
-              Frontend Developer
-            </span>{' '}
-            {''}
-            with a strong focus on building modern, responsive, and
-            user-friendly web applications using technologies like React.js,
-            Next.js, Tailwind CSS, and Shadcn UI. Experienced in delivering
-            pixel-perfect UIs, integrating with backend systems, and adding
-            motion through animations. Continuously learning and iterating to
-            deliver products that delight users and meet business goals.
+            <span className="font-semibold"> Senior Frontend Developer</span>{' '}
+            specializing in building scalable, high-performance web applications
+            with React, Next.js, and modern UI systems. Strong focus on clean
+            architecture, accessibility, and pixel-perfect execution.
+            Experienced in collaborating closely with designers and backend
+            teams to deliver seamless, production-ready experiences. Adept at
+            translating complex requirements into intuitive interfaces,
+            optimizing performance, and applying thoughtful animations to
+            enhance usability. Committed to continuous improvement, technical
+            excellence, and building products that drive real business value.
           </p>
         </BlurFade>
       </div>

@@ -22,7 +22,7 @@ const Experience = ({ delay }: Props) => {
                 <ExperienceCard
                   key={index}
                   title={exp.title}
-                  description={exp.description}
+                  bulletPoints={exp.bulletPoints}
                   dates={exp.dates}
                   location={exp.location}
                   image={exp.image}
