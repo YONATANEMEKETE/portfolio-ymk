@@ -1,20 +1,29 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
 
-const About = () => {
+interface Props {
+  delay: number;
+}
+
+const About = ({ delay }: Props) => {
   return (
     <section id="about">
-      <BlurFade delay={0.25}>
+      <BlurFade delay={delay * 2.5}>
         <h2 className="text-xl font-bold">About</h2>
       </BlurFade>
-      <BlurFade delay={0.27}>
+      <BlurFade delay={delay * 2.75}>
         <p className="text-justify">
-          a dedicated and growth-driven{' '}
-          <span className="text-primary font-semibold">Frontend Developer</span>{' '}
-          with a sharp eye for detail and a passion for building elegant,
-          high-performing web interfaces. I specialize in React.js and Next.js,
-          crafting responsive, scalable, and accessible web applications that
-          prioritize both user experience and performance.
+          A passionate {''}
+          <span className="font-bold underline text-primary">
+            Frontend Developer
+          </span>{' '}
+          {''}
+          with a strong focus on building modern, responsive, and user-friendly
+          web applications using technologies like React.js, Next.js, Tailwind
+          CSS, and Shadcn UI. Experienced in delivering pixel-perfect UIs,
+          integrating with backend systems, and adding motion through
+          animations. Continuously learning and iterating to deliver products
+          that delight users and meet business goals.
         </p>
       </BlurFade>
     </section>
