@@ -1,6 +1,6 @@
 import { Github, Gmail, LinkedIn, Telegram } from '@/components/icons/icons';
 import { link } from 'fs';
-import { HomeIcon } from 'lucide-react';
+import { GithubIcon, Globe, HomeIcon } from 'lucide-react';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -98,4 +98,38 @@ export const skills = [
   'GitHub',
   'Jest',
   'Cypress',
+];
+
+export const projects = [
+  {
+    title: 'Resume Tailor AI',
+    href: 'https://resume-tailor-zeta.vercel.app',
+    description:
+      'An AI-powered resume tailoring web app that analyzes job descriptions, identifies gaps in a user’s resume, and generates a tailored, editable version to improve job application success. Built with a chat-based UX focused on speed, clarity, and real-world job hunting workflows.',
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Vercel AI SDK',
+      'AI',
+      'Resume Optimization',
+      'ATS',
+      'Tiptap',
+      'React PDF',
+    ] as const,
+    link: 'https://resume-tailor-zeta.vercel.app',
+    image: '/og-image.png',
+    links: [
+      {
+        icon: <Globe />, // your icon component
+        type: 'Live App',
+        href: 'https://resume-tailor-zeta.vercel.app',
+      },
+      {
+        icon: <GithubIcon />, // your icon component
+        type: 'GitHub',
+        href: 'https://github.com/YOUR_USERNAME/resume-tailor-ai',
+      },
+    ],
+  },
 ];
