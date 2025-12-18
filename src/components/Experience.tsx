@@ -10,7 +10,7 @@ interface Props {
 
 const Experience = ({ delay }: Props) => {
   return (
-    <section id="experience">
+    <section id="experience" className="mt-10">
       <div className="space-y-12 w-full flex flex-col items-center">
         <BlurFade delay={delay * 3.25}>
           <SectionBadge text="Experience" />

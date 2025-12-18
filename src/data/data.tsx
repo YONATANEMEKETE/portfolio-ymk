@@ -79,3 +79,23 @@ export const experiences: Experience[] = [
     location: 'Remote',
   },
 ];
+
+export const skills = [
+  'JavaScript',
+  'TypeScript',
+  'React.js',
+  'Next.js',
+  'Tailwind.css',
+  'Sass',
+  'Shadcn UI',
+  'Motion',
+  'Zustand',
+  'Redux Toolkit',
+  'RESTful APIs',
+  'GraphQL',
+  'Vercel',
+  'Git',
+  'GitHub',
+  'Jest',
+  'Cypress',
+];
