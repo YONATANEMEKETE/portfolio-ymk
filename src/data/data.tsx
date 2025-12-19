@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
       'Collaborated closely with backend engineers and designers across the entire product lifecycle',
       'Optimized performance and code quality to ensure maintainability and production readiness',
     ],
-    dates: 'Mar 2025 - July 2025',
+    dates: 'Jan 2025 - Oct 2025',
     location: 'Remote',
     image: '/zulu.jpg',
     links: [
@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
       'Worked closely with designers and engineers to ensure accurate visual implementation and UX quality',
       'Ensured cross-device and cross-language compatibility',
     ],
-    dates: 'Nov 2024 – Feb 2025',
+    dates: 'Oct 2024 – Jan 2025',
     location: 'Addis Ababa',
     image: '/ablaze.jpg',
     links: [
@@ -93,7 +93,7 @@ export const experiences: Experience[] = [
       'Collaborated directly with clients to translate business requirements into technical solutions',
       'Managed projects independently, from planning and development to delivery and iteration',
     ],
-    dates: 'Nov 2023 – Present',
+    dates: 'Feb 2023 – Present',
     location: 'Remote',
   },
 ];
