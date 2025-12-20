@@ -1,6 +1,8 @@
 import { Github, Gmail, LinkedIn, Telegram } from '@/components/icons/icons';
-import { link } from 'fs';
+import { link, linkSync } from 'fs';
 import { GithubIcon, Globe, HomeIcon, LinkedinIcon } from 'lucide-react';
+import { image } from 'motion/react-client';
+import { title } from 'process';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -155,5 +157,70 @@ export const projects = [
         href: 'https://github.com/YONATANEMEKETE/ResumeTailor',
       },
     ],
+  },
+  {
+    title: 'SnapBuild',
+    href: 'https://snap-build.vercel.app/',
+    description:
+      'SnapBuild is a project management tool designed specifically for frontend developers. It provides a clear and organized roadmap to successfully build projects by streamlining planning, feature management, and execution. Whether you are defining goals, adding core features, breaking milestones, or visualizing the tech stack, SnapBuild ensures every step of the process is structured and manageable.',
+    tags: [
+      'Next.js 15',
+      'React 19',
+      'Typescript',
+      'Tailwind',
+      'Shadcn',
+      'Pinata w3',
+      'React Dropzone',
+    ],
+    link: 'https://snap-build.vercel.app/',
+    image: 'https://ik.imagekit.io/6qizpphtd1/Portfolio/753shots_so.png',
+    links: [
+      {
+        icon: <Globe />, // your icon component
+        type: 'Live App',
+        href: 'https://snap-build.vercel.app/',
+      },
+      {
+        icon: <GithubIcon />, // your icon component
+        type: 'GitHub',
+        href: 'https://github.com/YONATANEMEKETE/SnapBuild',
+      },
+    ],
+  },
+  {
+    title: 'BuySignal',
+    // href: 'https://buysignal.io',
+    description:
+      'BuySignal is a conversion-boosting tool that helps business owners increase sales by displaying smart popups on their websites. By injecting a simple script, it creates a sense of urgency through targeted messages, encouraging visitors to take action.',
+    tags: [
+      'Next.js 15',
+      'React 19',
+      'Typescript',
+      'Tailwind',
+      'Shadcn',
+      'recharts',
+      'React Hook Form',
+      'zod',
+    ],
+    // link: 'https://buysignal.io',
+    image:
+      'https://ik.imagekit.io/6qizpphtd1/buysignal/photo_2025-06-30_09-29-10.jpg?updatedAt=1753772240293',
+  },
+  {
+    title: 'Query.Design',
+    description:
+      'Query.Design is a developer tool that allows users to communicate with their database using natural language. It transforms plain English into structured queries and lets users save and share them as standalone, reusable pages—making data access faster and more intuitive.',
+    tags: [
+      'Next.js 15',
+      'React 19',
+      'Typescript',
+      'Tailwind',
+      'Shadcn',
+      'chart.js',
+      'React Hook Form',
+      'zod',
+    ],
+    image:
+      'https://ik.imagekit.io/6qizpphtd1/query.design/photo_2025-06-30_09-38-43.jpg?updatedAt=1753772323991',
   },
 ];
