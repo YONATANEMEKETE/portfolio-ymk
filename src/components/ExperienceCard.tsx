@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import MarkdownRenderer from './MarkdownRenderer';
 
 interface Props {
   title: string;
@@ -40,9 +41,12 @@ export function ExperienceCard({
           <p className="text-sm text-muted-foreground">{location}</p>
         )}
         {bulletPoints && bulletPoints.length > 0 && (
-          <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+          <ul className="text-sm space-y-1">
             {bulletPoints.map((point, idx) => (
-              <li key={idx}>{point}</li>
+              <li key={idx} className="flex gap-2">
+                <span className="text-muted-foreground mt-1.5">•</span>
+                <MarkdownRenderer content={point} className="flex-1" />
+              </li>
             ))}
           </ul>
         )}

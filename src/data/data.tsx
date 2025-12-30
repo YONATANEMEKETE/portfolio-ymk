@@ -1,8 +1,5 @@
 import { Github, Gmail, LinkedIn, Telegram } from '@/components/icons/icons';
-import { link, linkSync } from 'fs';
-import { GithubIcon, Globe, HomeIcon, LinkedinIcon } from 'lucide-react';
-import { image } from 'motion/react-client';
-import { title } from 'process';
+import { GithubIcon, Globe, LinkedinIcon } from 'lucide-react';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -29,6 +26,8 @@ export const navs = [
   },
 ];
 
+export const aboutDescription = `**Senior React & Next.js Frontend Developer** specializing in building scalable, high-performance applications with **React**, **TypeScript**, and modern component architecture. I focus heavily on clean code, accessibility, performance, and creating intuitive interfaces powered by **React Hooks**, **state management** (Redux Toolkit, Zustand, Jotai), and reusable UI systems built with **Tailwind CSS** and **Shadcn UI**. I enjoy collaborating closely with designers and backend teams to ship production-ready, maintainable **React** applications that deliver real business value.`;
+
 interface Experience {
   title: string;
   bulletPoints: string[];
@@ -46,12 +45,12 @@ export const experiences: Experience[] = [
   {
     title: 'Senior Frontend Developer – Zulu Tech',
     bulletPoints: [
-      'Led frontend development of a large-scale production web application using Next.js, Tailwind CSS, Shadcn UI, and Redux Toolkit',
-      'Built complex, data-driven user interfaces with robust client-side logic, API integrations, and state management',
-      'Translated design handoffs into scalable, reusable component architecture',
-      'Implemented animations and micro-interactions to enhance UX while maintaining accessibility and responsiveness',
+      'Led frontend development of a large-scale production web application using **Next.js**, **Tailwind CSS**, **Shadcn UI**, and **Redux Toolkit**',
+      'Built complex, data-driven user interfaces with robust **React** component architecture, API integrations, and **state management**',
+      'Translated design handoffs into scalable, reusable **React** components following modern best practices',
+      'Implemented animations and micro-interactions using **Motion** to enhance UX while maintaining accessibility and responsiveness',
       'Collaborated closely with backend engineers and designers across the entire product lifecycle',
-      'Optimized performance and code quality to ensure maintainability and production readiness',
+      'Optimized **React** performance and code quality to ensure maintainability and production readiness',
     ],
     dates: 'Jan 2025 - Oct 2025',
     location: 'Remote',
@@ -67,12 +66,12 @@ export const experiences: Experience[] = [
   {
     title: 'Frontend Developer – Ablaze Labs',
     bulletPoints: [
-      'Developed a multilingual government web portal to communicate ministerial activities to the public',
-      'Built responsive, accessible UI components with a strong focus on usability and consistency',
-      'Integrated frontend features with backend services to support dynamic, real-time content',
-      'Implemented animated and interactive UI elements to improve user engagement',
+      'Developed a multilingual government web portal using **React** and **Next.js** to communicate ministerial activities to the public',
+      'Built responsive, accessible **React** components with a strong focus on usability and consistency',
+      'Integrated frontend features with backend services using **RESTful APIs** to support dynamic, real-time content',
+      'Implemented animated and interactive UI elements with **React** to improve user engagement',
       'Worked closely with designers and engineers to ensure accurate visual implementation and UX quality',
-      'Ensured cross-device and cross-language compatibility',
+      'Ensured cross-device and cross-language compatibility using **React** best practices',
     ],
     dates: 'Oct 2024 – Jan 2025',
     location: 'Addis Ababa',
@@ -88,12 +87,12 @@ export const experiences: Experience[] = [
   {
     title: 'Frontend Developer (Freelance)',
     bulletPoints: [
-      'Delivered end-to-end frontend solutions for SaaS and web applications using React and Next.js',
-      'Designed and implemented reusable UI components and scalable frontend architectures',
-      'Integrated REST APIs and handled client-side state, forms, and user flows',
-      'Built conversion-focused interfaces with clean layouts and intuitive animations',
-      'Collaborated directly with clients to translate business requirements into technical solutions',
-      'Managed projects independently, from planning and development to delivery and iteration',
+      'Delivered end-to-end frontend solutions for SaaS and web applications using **React** and **Next.js**',
+      'Designed and implemented reusable **React** components and scalable frontend architectures',
+      'Integrated **REST APIs** and handled client-side state using **React Hooks**, forms with **React Hook Form**, and validation with **Zod**',
+      'Built conversion-focused interfaces with clean layouts, **Tailwind CSS**, and intuitive animations',
+      'Collaborated directly with clients to translate business requirements into technical **React** solutions',
+      'Managed projects independently, from planning and **React** development to delivery and iteration',
     ],
     dates: 'Feb 2023 – Present',
     location: 'Remote',
@@ -131,7 +130,7 @@ export const projects = [
     title: 'Resume Tailor AI',
     href: 'https://resume-tailor-zeta.vercel.app',
     description:
-      'An AI-powered resume tailoring web app that analyzes job descriptions, identifies gaps in a user’s resume, and generates a tailored, editable version to improve job application success. Built with a chat-based UX focused on speed, clarity, and real-world job hunting workflows.',
+      "An AI-powered resume tailoring web app built with **React** and **Next.js** that analyzes job descriptions, identifies gaps in a user's resume, and generates a tailored, editable version to improve job application success. Built with a chat-based UX using **Vercel AI SDK** and **React** components focused on speed, clarity, and real-world job hunting workflows",
     tags: [
       'Next.js',
       'React',
@@ -162,7 +161,7 @@ export const projects = [
     title: 'SnapBuild',
     href: 'https://snap-build.vercel.app/',
     description:
-      'SnapBuild is a project management tool designed specifically for frontend developers. It provides a clear and organized roadmap to successfully build projects by streamlining planning, feature management, and execution. Whether you are defining goals, adding core features, breaking milestones, or visualizing the tech stack, SnapBuild ensures every step of the process is structured and manageable.',
+      'A project management tool built with **React 19** and **Next.js 15** designed specifically for frontend developers. It provides a clear and organized roadmap to successfully build projects by streamlining planning, feature management, and execution using modern **React** patterns. Built with **TypeScript**, **Tailwind CSS**, and **Shadcn UI** to ensure every step of the process is structured and manageable.',
     tags: [
       'Next.js 15',
       'React 19',
@@ -191,7 +190,7 @@ export const projects = [
     title: 'BuySignal',
     // href: 'https://buysignal.io',
     description:
-      'BuySignal is a conversion-boosting tool that helps business owners increase sales by displaying smart popups on their websites. By injecting a simple script, it creates a sense of urgency through targeted messages, encouraging visitors to take action.',
+      'A conversion-boosting tool built with **React 19** and **Next.js 15** that helps business owners increase sales by displaying smart popups on their websites. Features a dashboard built with **React** components, **React Hook Form** for form handling, **Zod** validation, and **recharts** for analytics visualization.',
     tags: [
       'Next.js 15',
       'React 19',
@@ -209,7 +208,7 @@ export const projects = [
   {
     title: 'Query.Design',
     description:
-      'Query.Design is a developer tool that allows users to communicate with their database using natural language. It transforms plain English into structured queries and lets users save and share them as standalone, reusable pages—making data access faster and more intuitive.',
+      'A developer tool built with **React 19** and **Next.js 15** that allows users to communicate with their database using natural language. Features **React** components that transform plain English into structured queries, with **React Hook Form**, **Zod** validation, and **chart.js** for data visualization—making data access faster and more intuitive.',
     tags: [
       'Next.js 15',
       'React 19',

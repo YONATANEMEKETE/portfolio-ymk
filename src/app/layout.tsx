@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${monaSans.variable} min-h-screen bg-background  antialiased max-w-2xl mx-auto`}
+        className={`${geistMono.variable} ${monaSans.variable} min-h-screen bg-background  antialiased max-w-2xl mx-auto font-geist-mono`}
       >
         <ThemeProvider
           attribute="class"
