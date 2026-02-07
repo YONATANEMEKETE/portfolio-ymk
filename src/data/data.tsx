@@ -138,6 +138,38 @@ export const skills = [
 
 export const projects = [
   {
+    title: 'Noted',
+    href: 'https://noteed-1.vercel.app',
+    description:
+      'A calm, context-first PDF reading companion built with **Next.js** and **React**. Noted keeps notes, quotes, and story insights directly attached to what you read, so ideas never lose their source. It supports contextual text highlighting, focus mode, offline reading via PWA, and seamless resume reading — designed for students, researchers, and deep readers.',
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'PWA',
+      'Offline Support',
+      'PDF Reader',
+      'Productivity',
+      'Reading Tools',
+      'Prisma',
+      'PostgreSQL',
+    ] as const,
+    link: 'https://noteed-1.vercel.app',
+    image: '/noted-image.png',
+    links: [
+      {
+        icon: <Globe />,
+        type: 'Live App',
+        href: 'https://noteed-1.vercel.app',
+      },
+      {
+        icon: <GithubIcon />,
+        type: 'GitHub',
+        href: 'https://github.com/YONATANEMEKETE/read-comp', // replace if needed
+      },
+    ],
+  },
+  {
     title: 'Resume Tailor AI',
     href: 'https://resume-tailor-zeta.vercel.app',
     description:
