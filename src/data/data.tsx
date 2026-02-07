@@ -26,7 +26,13 @@ export const navs = [
   },
 ];
 
-export const aboutDescription = `**Senior React & Next.js Frontend Developer** specializing in building scalable, high-performance applications with **React**, **TypeScript**, and modern component architecture. I focus heavily on clean code, accessibility, performance, and creating intuitive interfaces powered by **React Hooks**, **state management** (Redux Toolkit, Zustand, Jotai), and reusable UI systems built with **Tailwind CSS** and **Shadcn UI**. I enjoy collaborating closely with designers and backend teams to ship production-ready, maintainable **React** applications that deliver real business value.`;
+export const aboutDescription = `I build web applications that feel fast, look clean, and scale smoothly.
+
+As a frontend developer, I spend most of my time with **React** and **Next.js** — turning complex requirements into simple, intuitive interfaces. I care about the details: performance, accessibility, and code that won't haunt us six months later.
+
+My toolkit includes **TypeScript**, **Tailwind CSS**, and modern state management. I enjoy the challenge of balancing design vision with technical constraints, and I work best when collaborating closely with designers and backend engineers.
+
+When I'm not coding, I'm usually exploring new tools or refining workflows that help teams ship better products faster.`;
 
 interface Experience {
   title: string;
