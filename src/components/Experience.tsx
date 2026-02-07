@@ -10,7 +10,7 @@ interface Props {
 
 const Experience = ({ delay }: Props) => {
   return (
-    <TechnicalSection id="experience" className="py-20">
+    <TechnicalSection id="experience" className="py-20" delay={delay * 2}>
       <BlurFade delay={delay * 2}>
         <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">

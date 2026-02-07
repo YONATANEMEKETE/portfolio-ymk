@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/Navigation';
-import { GridLines } from '@/components/ui/grid-lines';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,7 +37,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="noise" />
-          <GridLines />
           <main className="relative max-w-4xl mx-auto px-6 py-12 mb-24 z-10">
             {children}
           </main>

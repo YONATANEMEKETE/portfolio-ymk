@@ -31,12 +31,12 @@ const SkillCategory = ({ title, items, baseDelay }: { title: string; items: stri
   const categorySkills = items.filter(item => skills.includes(item));
   
   return (
-    <BlurFade delay={baseDelay}>
+      <BlurFade delay={baseDelay}>
       <div className="relative p-5 bg-zinc-900/20 border border-white/10 h-full">
-        <Plus className="-top-2 -left-2 opacity-40" />
-        <Plus className="-top-2 -right-2 opacity-40" />
-        <Plus className="-bottom-2 -left-2 opacity-40" />
-        <Plus className="-bottom-2 -right-2 opacity-40" />
+        <Plus className="-top-2 -left-2 opacity-40" delay={baseDelay + 0.1} />
+        <Plus className="-top-2 -right-2 opacity-40" delay={baseDelay + 0.2} />
+        <Plus className="-bottom-2 -left-2 opacity-40" delay={baseDelay + 0.3} />
+        <Plus className="-bottom-2 -right-2 opacity-40" delay={baseDelay + 0.4} />
         
         <div className="mb-4 flex items-center justify-between">
           <h3 className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500">{title}</h3>
@@ -57,7 +57,7 @@ const Skills = ({ delay }: Props) => {
   const categories = Object.entries(skillCategories);
   
   return (
-    <TechnicalSection id="skills" className="py-20">
+    <TechnicalSection id="skills" className="py-20" delay={delay * 2.5}>
       <BlurFade delay={delay * 2.5}>
         <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">

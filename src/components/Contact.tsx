@@ -11,7 +11,7 @@ interface Props {
 
 const Contact = ({ delay }: Props) => {
   return (
-    <TechnicalSection id="contact" className="py-20 mb-0">
+    <TechnicalSection id="contact" className="py-20 mb-0" delay={delay * 2}>
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
         <BlurFade delay={delay * 2}>
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">
@@ -31,10 +31,10 @@ const Contact = ({ delay }: Props) => {
 
         <BlurFade delay={delay * 2.5}>
           <div className="relative p-8 bg-zinc-900/40 border border-white/10 mt-4">
-            <Plus className="-top-2 -left-2 opacity-40" />
-            <Plus className="-top-2 -right-2 opacity-40" />
-            <Plus className="-bottom-2 -left-2 opacity-40" />
-            <Plus className="-bottom-2 -right-2 opacity-40" />
+            <Plus className="-top-2 -left-2 opacity-40" delay={delay * 2.6} />
+            <Plus className="-top-2 -right-2 opacity-40" delay={delay * 2.7} />
+            <Plus className="-bottom-2 -left-2 opacity-40" delay={delay * 2.8} />
+            <Plus className="-bottom-2 -right-2 opacity-40" delay={delay * 2.9} />
             
             <div className="flex flex-wrap justify-center gap-4">
               {navs.map((nav, idx) => {

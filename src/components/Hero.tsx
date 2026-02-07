@@ -10,7 +10,7 @@ interface Props {
 
 const Hero = ({ delay }: Props) => {
   return (
-    <TechnicalSection className="mt-12">
+    <TechnicalSection className="mt-12" delay={delay * 0.5}>
       <div className="flex flex-col items-center gap-y-10 w-full">
         <BlurFade delay={delay}>
           <div className="relative min-[500px]:size-32 size-28 rounded-none overflow-clip cursor-pointer border border-white/10 p-2 bg-zinc-900/50 backdrop-blur-sm">
