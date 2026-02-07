@@ -1,15 +1,9 @@
 import { Badge } from '@/components/ui/badge';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import MarkdownRenderer from './MarkdownRenderer';
+import { Plus } from './ui/plus';
 
 interface Props {
   title: string;
@@ -37,66 +31,79 @@ export function ProjectCard({
   className,
 }: Props) {
   return (
-    <Card
-      className={
-        'flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full'
-      }
+    <div
+      className={cn(
+        "group relative flex flex-col bg-zinc-900/40 border border-white/10 transition-all duration-500 hover:bg-zinc-900/60 hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] h-full overflow-hidden",
+        className
+      )}
     >
+      <Plus className="-top-2 -left-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-top-2 -right-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-bottom-2 -left-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-bottom-2 -right-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+
       <Link
         href={href || '#'}
-        className={cn('block cursor-pointer', className)}
+        target="_blank"
+        className="block cursor-pointer overflow-hidden border-b border-white/5"
       >
         {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
+          <div className="relative h-48 w-full overflow-hidden">
+            <Image
+              src={image}
+              alt={title}
+              width={500}
+              height={300}
+              className="h-full w-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent opacity-60" />
+          </div>
         )}
       </Link>
-      <CardHeader className="px-2">
-        <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <div className="hidden font-sans text-xs underline print:visible">
-            {link?.replace('https://', '').replace('www.', '').replace('/', '')}
+      
+      <div className="flex flex-col flex-1 p-5 space-y-4">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-bold tracking-wider text-white uppercase">{title}</h3>
+            <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-tighter">
+              {tags[0]}
+            </div>
           </div>
+          
           <MarkdownRenderer
             content={description}
-            className="prose max-w-full text-pretty text-xs dark:prose-invert text-justify"
+            className="prose max-w-full text-pretty text-xs text-zinc-400 leading-relaxed text-justify line-clamp-3"
           />
         </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
-        {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-1 py-0 text-[10px]"
-                variant="secondary"
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        )}
-      </CardContent>
-      <CardFooter className="px-2 pb-2">
+
+        <div className="mt-auto pt-4 flex flex-wrap gap-1.5">
+          {tags?.slice(0, 4).map((tag) => (
+            <span
+              key={tag}
+              className="text-[9px] font-mono uppercase tracking-widest text-zinc-500 border border-white/5 px-2 py-0.5 bg-white/5"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
         {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
+          <div className="flex flex-row flex-wrap items-start gap-3 pt-2">
             {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
+              <Link 
+                href={link?.href} 
+                key={idx} 
+                target="_blank" 
+                className="text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5"
+              >
+                <span className="scale-75">{link.icon}</span>
+                <span className="text-[10px] font-mono uppercase tracking-widest">{link.type}</span>
               </Link>
             ))}
           </div>
         )}
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 }
+

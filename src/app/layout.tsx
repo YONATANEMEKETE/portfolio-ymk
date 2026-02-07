@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Mona_Sans } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/Navigation';
+import { GridLines } from '@/components/ui/grid-lines';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -12,12 +13,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
-});
-
-const monaSans = Mona_Sans({
-  variable: '--font-mona-sans',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -32,18 +27,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} ${monaSans.variable} min-h-screen bg-background  antialiased max-w-2xl mx-auto font-geist-mono`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background antialiased font-sans`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
-          <Navigation />
+          <div className="noise" />
+          <GridLines />
+          <main className="relative max-w-4xl mx-auto px-6 py-12 mb-24 z-10">
+            {children}
+          </main>
+          {/* <Navigation /> */}
         </ThemeProvider>
       </body>
     </html>

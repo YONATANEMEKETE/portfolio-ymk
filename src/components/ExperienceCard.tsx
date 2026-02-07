@@ -1,7 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
+import { BlurFade } from './ui/blur-fade';
+import { Plus } from './ui/plus';
 import Link from 'next/link';
 import MarkdownRenderer from './MarkdownRenderer';
+import Image from 'next/image';
 
 interface Props {
   title: string;
@@ -25,44 +26,67 @@ export function ExperienceCard({
   links,
 }: Props) {
   return (
-    <li className="relative ml-10 py-4">
-      <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-        <Avatar className="border size-12 m-auto">
-          <AvatarImage src={image} alt={title} className="object-contain" />
-          <AvatarFallback>{title[0]}</AvatarFallback>
-        </Avatar>
-      </div>
-      <div className="flex flex-1 flex-col justify-start gap-1">
-        {dates && (
-          <time className="text-xs text-muted-foreground">{dates}</time>
+    <div className="relative p-6 bg-zinc-900/40 border border-white/10 hover:bg-zinc-900/60 transition-all duration-500 group">
+      <Plus className="-top-2 -left-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-top-2 -right-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-bottom-2 -left-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+      <Plus className="-bottom-2 -right-2 opacity-40 group-hover:opacity-100 transition-opacity" />
+
+      <div className="flex flex-col sm:flex-row gap-5">
+        {image && (
+          <div className="relative shrink-0 w-14 h-14 bg-zinc-800 border border-white/10 overflow-hidden">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
         )}
-        <h2 className="font-semibold leading-none">{title}</h2>
-        {location && (
-          <p className="text-sm text-muted-foreground">{location}</p>
-        )}
-        {bulletPoints && bulletPoints.length > 0 && (
-          <ul className="text-sm space-y-1">
+
+        <div className="flex-1 space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div>
+              <h3 className="text-base font-bold tracking-wider text-white uppercase">
+                {title}
+              </h3>
+              <div className="flex items-center gap-3 mt-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
+                  {dates}
+                </span>
+                <span className="text-zinc-600">//</span>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
+                  {location}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <ul className="space-y-2">
             {bulletPoints.map((point, idx) => (
-              <li key={idx} className="flex gap-2">
-                <span className="text-muted-foreground mt-1.5">•</span>
+              <li key={idx} className="flex gap-3 text-zinc-400 text-sm leading-relaxed">
+                <span className="text-zinc-600 mt-1.5 text-[10px]">▸</span>
                 <MarkdownRenderer content={point} className="flex-1" />
               </li>
             ))}
           </ul>
-        )}
-      </div>
-      {links && links.length > 0 && (
-        <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
-          {links?.map((link, idx) => (
-            <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2">
-                {link.icon}
-                {link.title}
-              </Badge>
-            </Link>
-          ))}
+
+          {links && links.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {links.map((link, idx) => (
+                <Link
+                  href={link.href}
+                  key={idx}
+                  className="text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 border border-white/10 px-2 py-1 bg-white/5 hover:bg-white/10"
+                >
+                  <span className="scale-75">{link.icon}</span>
+                  <span className="text-[10px] font-mono uppercase tracking-widest">{link.title}</span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
-      )}
-    </li>
+      </div>
+    </div>
   );
 }

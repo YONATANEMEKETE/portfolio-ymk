@@ -6,22 +6,22 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export const navs = [
   {
     icon: LinkedIn,
-    link: 'https://www.linkedin.com/in/ymkhanh/',
+    link: 'https://www.linkedin.com/in/yonatanemekete/',
     tooltip: 'LinkedIn',
   },
   {
     icon: Github,
-    link: 'https://github.com/ymkhanh',
+    link: 'https://github.com/YONATANEMEKETE',
     tooltip: 'GitHub',
   },
   {
     icon: Gmail,
-    link: 'mailto:ymkhanh@gmail.com',
+    link: 'mailto:yonatanemekete22@gmail.com',
     tooltip: 'Gmail',
   },
   {
     icon: Telegram,
-    link: 'https://t.me/ymkhanh',
+    link: 'https://t.me/yonatanemekete',
     tooltip: 'Telegram',
   },
 ];
