@@ -10,11 +10,11 @@ interface Props {
 
 const skillCategories = {
   'Core': ['JavaScript', 'TypeScript', 'React.js', 'Next.js'],
-  'Styling': ['Tailwind.css', 'Sass', 'Shadcn UI', 'Motion'],
+  'Styling': ['Tailwind.css', 'Sass', 'Shadcn UI', 'Framer Motion', 'GSAP'],
   'State': ['Zustand', 'Redux Toolkit', 'Jotai', 'TanStack Query'],
   'APIs': ['RESTful APIs', 'GraphQL', 'React Hook Form', 'Zod'],
-  'Testing': ['Jest', 'Cypress'],
-  'Tools': ['Vercel', 'Git', 'GitHub', 'Figma'],
+  'Testing': ['Jest', 'Vitest', 'React Testing Library', 'Cypress', 'Playwright'],
+  'Tools': ['Vite', 'Vercel', 'Git', 'GitHub', 'Figma'],
 };
 
 const SkillCell = ({ skill, delay, index }: { skill: string; delay: number; index: number }) => (
