@@ -1,17 +1,31 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
-import { content } from '@/data/data';
 import { ExperienceCard } from './ExperienceCard';
 import { TechnicalSection } from './ui/technical-section';
 
-interface Props {
-  delay: number;
+interface ExperienceContent {
+  items: Array<{
+    title: string;
+    bulletPoints: string[];
+    dates: string;
+    location: string;
+    image?: string;
+    links?: readonly {
+      icon: React.ReactNode;
+      title: string;
+      href: string;
+    }[];
+  }>;
 }
 
-const Experience = ({ delay }: Props) => {
+interface Props {
+  content: ExperienceContent;
+}
+
+const Experience = ({ content }: Props) => {
   return (
-    <TechnicalSection id="experience" className="py-20" delay={delay * 2}>
-      <BlurFade delay={delay * 2}>
+    <TechnicalSection id="experience" className="py-20" delay={0.08}>
+      <BlurFade delay={0.08}>
         <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">
             Work History
@@ -22,9 +36,9 @@ const Experience = ({ delay }: Props) => {
         </div>
       </BlurFade>
 
-<div className="space-y-4">
-        {content.experience.items.map((exp, index) => (
-          <BlurFade key={index} delay={delay * (2.25 + index * 0.1)}>
+      <div className="space-y-4">
+        {content.items.map((exp, index) => (
+          <BlurFade key={index} delay={0.09 + index * 0.01}>
             <ExperienceCard
               title={exp.title}
               bulletPoints={exp.bulletPoints}

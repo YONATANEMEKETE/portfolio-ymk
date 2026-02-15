@@ -2,13 +2,15 @@ import React from 'react';
 import { BlurFade } from './ui/blur-fade';
 import { TechnicalSection } from './ui/technical-section';
 import { Plus } from './ui/plus';
-import { content } from '@/data/data';
 
-interface Props {
-  delay: number;
+interface SkillsContent {
+  items: string[];
+  categories: Record<string, string[]>;
 }
 
-const skillCategories = content.skills.categories;
+interface Props {
+  content: SkillsContent;
+}
 
 const SkillCell = ({ skill, delay, index }: { skill: string; delay: number; index: number }) => (
   <BlurFade delay={delay * (3 + index * 0.05)}>
@@ -20,8 +22,8 @@ const SkillCell = ({ skill, delay, index }: { skill: string; delay: number; inde
   </BlurFade>
 );
 
-const SkillCategory = ({ title, items, baseDelay }: { title: string; items: string[]; baseDelay: number }) => {
-  const categorySkills = items.filter(item => content.skills.items.includes(item));
+const SkillCategory = ({ title, items, baseDelay, skillsItems }: { title: string; items: string[]; baseDelay: number; skillsItems: string[] }) => {
+  const categorySkills = items.filter(item => skillsItems.includes(item));
   
   return (
       <BlurFade delay={baseDelay}>
@@ -46,12 +48,12 @@ const SkillCategory = ({ title, items, baseDelay }: { title: string; items: stri
   );
 };
 
-const Skills = ({ delay }: Props) => {
-  const categories = Object.entries(skillCategories);
+const Skills = ({ content }: Props) => {
+  const categories = Object.entries(content.categories);
   
   return (
-    <TechnicalSection id="skills" className="py-20" delay={delay * 2.5}>
-      <BlurFade delay={delay * 2.5}>
+    <TechnicalSection id="skills" className="py-20" delay={0.1}>
+      <BlurFade delay={0.1}>
         <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">
             Technical Stack
@@ -68,7 +70,8 @@ const Skills = ({ delay }: Props) => {
             key={title} 
             title={title} 
             items={items} 
-            baseDelay={delay * (2.75 + index * 0.1)} 
+            baseDelay={0.11 + index * 0.01}
+            skillsItems={content.items}
           />
         ))}
       </div>

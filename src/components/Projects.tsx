@@ -1,17 +1,33 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
-import { content } from '@/data/data';
 import { ProjectCard } from './ProjectCard';
 import { TechnicalSection } from './ui/technical-section';
 
-interface Props {
-  delay: number;
+interface ProjectContent {
+  items: Array<{
+    title: string;
+    href?: string;
+    description: string;
+    tags: readonly string[];
+    link?: string;
+    image: string;
+    links?: readonly {
+      icon: React.ReactNode;
+      type: string;
+      href: string;
+    }[];
+  }>;
+  description: string;
 }
 
-const Projects = ({ delay }: Props) => {
+interface Props {
+  content: ProjectContent;
+}
+
+const Projects = ({ content }: Props) => {
   return (
-    <TechnicalSection id="projects" className="py-20" delay={delay * 2}>
-      <BlurFade delay={delay * 2}>
+    <TechnicalSection id="projects" className="py-20" delay={0.08}>
+      <BlurFade delay={0.08}>
         <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
           <div className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 border border-white/10 px-4 py-1">
             Selected Works
@@ -20,16 +36,16 @@ const Projects = ({ delay }: Props) => {
             Projects
           </h2>
           <p className="text-zinc-400 max-w-lg mx-auto leading-relaxed text-sm uppercase tracking-wide">
-            {content.projects.description}
+            {content.description}
           </p>
         </div>
       </BlurFade>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
-        {content.projects.items.map((project, id) => (
+        {content.items.map((project, id) => (
           <BlurFade 
             key={project.title} 
-            delay={delay * (2.25 + id * 0.1)}
+            delay={0.09 + id * 0.01}
             className={id === 0 ? "sm:col-span-2 lg:col-span-2" : ""}
           >
             <ProjectCard
