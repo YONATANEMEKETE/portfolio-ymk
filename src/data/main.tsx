@@ -3,7 +3,7 @@ import { GithubIcon, Globe, LinkedinIcon } from 'lucide-react';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-// Product-Focused Portfolio
+// Product-Focused Portfolio (Refined Main Version)
 
 export const navs = [
   {
@@ -20,13 +20,15 @@ export const navs = [
   { icon: Telegram, link: 'https://t.me/yonatanemekete', tooltip: 'Telegram' },
 ];
 
-export const aboutDescription = `I build web applications with a strong product focus: turning ideas into tangible, user-friendly experiences that drive real business value.
+export const aboutDescription = `I build web products that solve real problems not just interfaces.
 
-I specialize in **React** and **Next.js**, but my emphasis is on solving problems for users and teams, designing scalable interfaces, and making technical decisions that align with product goals.
+As a product-focused frontend engineer, I turn ideas into scalable, production-ready applications with a strong emphasis on usability, performance, and long-term maintainability.
 
-My toolkit includes **TypeScript**, **Tailwind CSS**, modern state management, and product-oriented workflows. I thrive when collaborating with designers, product managers, and backend engineers to ship solutions that users love.
+I specialize in **React** and **Next.js**, architecting systems that balance business goals with technical excellence. My approach combines product thinking, clean component architecture, and thoughtful UX decisions.
 
-Outside of coding, I explore product trends, experiment with new tools, and optimize processes that help teams deliver faster and smarter.`;
+I work comfortably across the product lifecycle from shaping early feature ideas with stakeholders to shipping optimized, user-driven experiences in production.
+
+Beyond coding, I study product strategy, experiment with AI-powered workflows, and continuously refine how teams build, ship, and iterate faster.`;
 
 export interface Experience {
   title: string;
@@ -45,12 +47,12 @@ export const experiences: Experience[] = [
   {
     title: 'Senior Frontend Developer – Zulu Tech',
     bulletPoints: [
-      'Led frontend product decisions for a large-scale web application using **Next.js**, **Tailwind CSS**, **Shadcn UI**, and **Redux Toolkit**',
-      'Designed and implemented scalable, reusable **React** components aligned with product goals',
-      'Collaborated with product managers to translate feature ideas into actionable frontend solutions',
-      'Implemented micro-interactions and animations to enhance user engagement and retention',
-      'Optimized frontend performance to ensure smooth product experience across devices',
-      'Mentored junior developers on product-focused frontend design and best practices',
+      'Led frontend architecture and product implementation for a large-scale web application using **Next.js**, **TypeScript**, and **Shadcn UI**',
+      'Partnered with product managers to translate roadmap features into scalable frontend systems',
+      'Designed reusable component architecture that improved development velocity and consistency',
+      'Implemented performance optimizations including dynamic rendering strategies and code splitting',
+      'Enhanced user engagement through micro-interactions and refined UX patterns',
+      'Mentored developers on writing maintainable, product-aligned frontend code',
     ],
     dates: 'Jan 2025 - Oct 2025',
     location: 'Remote',
@@ -66,12 +68,12 @@ export const experiences: Experience[] = [
   {
     title: 'Frontend Developer – Ablaze Labs',
     bulletPoints: [
-      'Built a multilingual government portal with **React** and **Next.js**, focused on user-centric product design',
-      'Ensured accessibility and responsiveness to improve usability for diverse audiences',
-      'Integrated dynamic content features using **RESTful APIs** to enhance user experience',
-      'Collaborated closely with designers and PMs to refine product features based on user feedback',
-      'Implemented interactive UI elements to increase engagement and comprehension',
-      'Maintained consistency and quality across multiple product releases',
+      'Built and maintained a multilingual government platform using **React** and **Next.js**',
+      'Focused on accessibility, responsiveness, and clarity for diverse user groups',
+      'Integrated scalable API-driven content systems to enable dynamic updates',
+      'Collaborated closely with designers and stakeholders to refine UX through feedback loops',
+      'Improved interface consistency across releases with structured design systems',
+      'Delivered high-quality frontend solutions under tight iteration cycles',
     ],
     dates: 'Oct 2024 – Jan 2025',
     location: 'Addis Ababa',
@@ -87,12 +89,12 @@ export const experiences: Experience[] = [
   {
     title: 'Frontend Developer (Freelance)',
     bulletPoints: [
-      'Delivered product-focused web applications for SaaS clients using **React** and **Next.js**',
-      'Transformed client requirements into user-friendly interfaces and scalable frontend architecture',
-      'Integrated **REST APIs** and managed state with **React Hooks**, **React Hook Form**, and **Zod**',
-      'Built clean, conversion-oriented interfaces with **Tailwind CSS** and product-focused animations',
-      'Collaborated with clients on product strategy and technical decisions',
-      'Managed end-to-end development cycles independently, from ideation to delivery',
+      'Developed production-ready SaaS interfaces using **React**, **Next.js**, and **TypeScript**',
+      'Architected scalable frontend structures aligned with business and user goals',
+      'Integrated REST APIs with optimized state management patterns',
+      'Built conversion-oriented, performance-conscious user interfaces',
+      'Advised clients on product decisions, technical trade-offs, and frontend scalability',
+      'Managed full lifecycle delivery — from ideation to deployment',
     ],
     dates: 'Feb 2023 – Present',
     location: 'Remote',
@@ -104,30 +106,30 @@ export const skills = [
   'TypeScript',
   'React.js',
   'Next.js',
-  'Tailwind.css',
+  'Tailwind CSS',
   'Sass',
   'Shadcn UI',
   'Framer Motion',
   'GSAP',
   'Zustand',
   'Redux Toolkit',
-  'RESTful APIs',
+  'Jotai',
+  'TanStack Query',
+  'REST APIs',
   'GraphQL',
-  'Vercel',
-  'Git',
-  'GitHub',
+  'React Hook Form',
+  'Zod',
   'Jest',
   'Vitest',
   'React Testing Library',
   'Cypress',
   'Playwright',
+  'Vercel',
+  'Git',
+  'GitHub',
   'Figma',
-  'React Hook Form',
-  'Jotai',
-  'TanStack Query',
-  'Zod',
   'Vite',
-  'Progressive Web Apps (PWA)',
+  'Progressive Web Apps',
 ];
 
 export interface Project {
@@ -149,18 +151,16 @@ export const projects: Project[] = [
     title: 'Noted',
     href: 'https://noteed-1.vercel.app',
     description:
-      'A product-focused PDF reading companion built with **Next.js** and **React**. Designed to help students and researchers capture insights, highlights, and notes contextually for better productivity and decision-making.',
+      'A productivity-focused PDF reading companion built with **Next.js** and **TypeScript**. Enables contextual note-taking, highlighting, and offline support to improve deep reading workflows for students and researchers.',
     tags: [
       'Next.js',
       'React',
       'TypeScript',
       'PWA',
       'Offline Support',
-      'PDF Reader',
-      'Productivity',
-      'Reading Tools',
       'Prisma',
       'PostgreSQL',
+      'Productivity',
     ],
     link: 'https://noteed-1.vercel.app',
     image: '/noted-image.png',
@@ -181,15 +181,13 @@ export const projects: Project[] = [
     title: 'Resume Tailor AI',
     href: 'https://resume-tailor-zeta.vercel.app',
     description:
-      'An AI-powered product that tailors resumes to job descriptions, highlighting key gaps and actionable improvements. Built with **React** and **Next.js** focusing on speed, UX, and practical value for job seekers.',
+      'An AI-powered web application that analyzes job descriptions, identifies resume gaps, and generates tailored, editable content. Designed for speed, clarity, and measurable job application improvement.',
     tags: [
       'Next.js',
       'React',
       'TypeScript',
-      'Vercel AI SDK',
       'AI',
-      'Resume Optimization',
-      'ATS',
+      'Vercel AI SDK',
       'Tiptap',
       'React PDF',
     ],
@@ -212,15 +210,14 @@ export const projects: Project[] = [
     title: 'SnapBuild',
     href: 'https://snap-build.vercel.app/',
     description:
-      'A product management tool for frontend developers, providing a roadmap to plan, track, and ship projects efficiently. Built with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS**.',
+      'A structured project planning tool for frontend developers, helping teams define goals, features, milestones, and tech stacks to ship products with clarity and speed.',
     tags: [
-      'Next.js 15',
-      'React 19',
-      'Typescript',
+      'Next.js',
+      'React',
+      'TypeScript',
       'Tailwind',
       'Shadcn',
-      'Pinata w3',
-      'React Dropzone',
+      'Project Planning',
     ],
     link: 'https://snap-build.vercel.app/',
     image: 'https://ik.imagekit.io/6qizpphtd1/Portfolio/753shots_so.png',
@@ -240,16 +237,13 @@ export const projects: Project[] = [
   {
     title: 'BuySignal',
     description:
-      'A conversion-focused tool designed to help businesses boost sales through smart product popups and insights, built with **React** and **Next.js**.',
+      'A conversion-optimization tool that enables businesses to trigger real-time urgency signals and product insights, designed to increase engagement and sales performance.',
     tags: [
-      'Next.js 15',
-      'React 19',
-      'Typescript',
-      'Tailwind',
-      'Shadcn',
-      'recharts',
-      'React Hook Form',
-      'zod',
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Recharts',
+      'Conversion Optimization',
     ],
     image:
       'https://ik.imagekit.io/6qizpphtd1/buysignal/photo_2025-06-30_09-29-10.jpg?updatedAt=1753772240293',
@@ -257,17 +251,8 @@ export const projects: Project[] = [
   {
     title: 'Query.Design',
     description:
-      'A developer product that lets users query their databases naturally and quickly, emphasizing usability, productivity, and actionable data insights.',
-    tags: [
-      'Next.js 15',
-      'React 19',
-      'Typescript',
-      'Tailwind',
-      'Shadcn',
-      'chart.js',
-      'React Hook Form',
-      'zod',
-    ],
+      'A developer-focused application that transforms natural language into structured database queries, simplifying data exploration and accelerating decision-making.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Chart.js', 'AI Querying'],
     image:
       'https://ik.imagekit.io/6qizpphtd1/query.design/photo_2025-06-30_09-38-43.jpg?updatedAt=1753772323991',
   },
@@ -276,18 +261,18 @@ export const projects: Project[] = [
 export const content = {
   hero: {
     name: 'YONATANE.M',
-    title: 'Product-Focused React Developer',
+    title: 'Product-Focused Frontend Engineer',
     tagline:
-      'Building web experiences that users love and products that scale.',
+      'Turning ideas into scalable, high-impact web products with React & Next.js.',
   },
   about: { description: aboutDescription },
   skills: {
     items: skills,
     categories: {
       Core: ['JavaScript', 'TypeScript', 'React.js', 'Next.js'],
-      Styling: ['Tailwind.css', 'Sass', 'Shadcn UI', 'Framer Motion', 'GSAP'],
+      Styling: ['Tailwind CSS', 'Sass', 'Shadcn UI', 'Framer Motion', 'GSAP'],
       State: ['Zustand', 'Redux Toolkit', 'Jotai', 'TanStack Query'],
-      APIs: ['RESTful APIs', 'GraphQL', 'React Hook Form', 'Zod'],
+      APIs: ['REST APIs', 'GraphQL', 'React Hook Form', 'Zod'],
       Testing: [
         'Jest',
         'Vitest',
@@ -302,12 +287,12 @@ export const content = {
   projects: {
     items: projects,
     description:
-      'A collection of production-ready, product-oriented applications built with React and Next.js',
+      'Production-ready web applications focused on usability, scalability, and measurable product impact.',
   },
   contact: {
     links: navs,
     description:
-      'Reach out via email, LinkedIn, or Telegram to discuss product-focused projects or collaborations.',
+      'Open to product-driven frontend roles, SaaS collaborations, and AI-powered web projects.',
     copyright: 'Yonatane Mekete',
   },
 };
