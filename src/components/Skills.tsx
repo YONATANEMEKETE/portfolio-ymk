@@ -2,20 +2,13 @@ import React from 'react';
 import { BlurFade } from './ui/blur-fade';
 import { TechnicalSection } from './ui/technical-section';
 import { Plus } from './ui/plus';
-import { skills } from '@/data/data';
+import { content } from '@/data/data';
 
 interface Props {
   delay: number;
 }
 
-const skillCategories = {
-  'Core': ['JavaScript', 'TypeScript', 'React.js', 'Next.js'],
-  'Styling': ['Tailwind.css', 'Sass', 'Shadcn UI', 'Framer Motion', 'GSAP'],
-  'State': ['Zustand', 'Redux Toolkit', 'Jotai', 'TanStack Query'],
-  'APIs': ['RESTful APIs', 'GraphQL', 'React Hook Form', 'Zod'],
-  'Testing': ['Jest', 'Vitest', 'React Testing Library', 'Cypress', 'Playwright'],
-  'Tools': ['Vite', 'Vercel', 'Git', 'GitHub', 'Figma'],
-};
+const skillCategories = content.skills.categories;
 
 const SkillCell = ({ skill, delay, index }: { skill: string; delay: number; index: number }) => (
   <BlurFade delay={delay * (3 + index * 0.05)}>
@@ -28,7 +21,7 @@ const SkillCell = ({ skill, delay, index }: { skill: string; delay: number; inde
 );
 
 const SkillCategory = ({ title, items, baseDelay }: { title: string; items: string[]; baseDelay: number }) => {
-  const categorySkills = items.filter(item => skills.includes(item));
+  const categorySkills = items.filter(item => content.skills.items.includes(item));
   
   return (
       <BlurFade delay={baseDelay}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
 import MarkdownRenderer from './MarkdownRenderer';
-import { aboutDescription } from '@/data/data';
+import { content } from '@/data/data';
 import { TechnicalSection } from './ui/technical-section';
 
 interface Props {
@@ -27,8 +27,8 @@ const About = ({ delay }: Props) => {
           <BlurFade delay={delay * 2.5}>
             <div className="relative p-8 bg-zinc-900/40 border border-white/10">
               <div className="absolute -top-2 -left-2 text-zinc-500 text-[10px] font-mono">01</div>
-              <MarkdownRenderer
-                content={aboutDescription}
+<MarkdownRenderer
+                content={content.about.description}
                 className="text-zinc-400 leading-relaxed text-sm uppercase tracking-wide prose-zinc prose-invert"
               />
             </div>

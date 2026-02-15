@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
-import { projects } from '@/data/data';
+import { content } from '@/data/data';
 import { ProjectCard } from './ProjectCard';
 import { TechnicalSection } from './ui/technical-section';
 
@@ -20,13 +20,13 @@ const Projects = ({ delay }: Props) => {
             Projects
           </h2>
           <p className="text-zinc-400 max-w-lg mx-auto leading-relaxed text-sm uppercase tracking-wide">
-            A collection of production-ready applications built with React and Next.js
+            {content.projects.description}
           </p>
         </div>
       </BlurFade>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
-        {projects.map((project, id) => (
+        {content.projects.items.map((project, id) => (
           <BlurFade 
             key={project.title} 
             delay={delay * (2.25 + id * 0.1)}

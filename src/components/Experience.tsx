@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
-import { experiences } from '@/data/data';
+import { content } from '@/data/data';
 import { ExperienceCard } from './ExperienceCard';
 import { TechnicalSection } from './ui/technical-section';
 
@@ -22,8 +22,8 @@ const Experience = ({ delay }: Props) => {
         </div>
       </BlurFade>
 
-      <div className="space-y-4">
-        {experiences.map((exp, index) => (
+<div className="space-y-4">
+        {content.experience.items.map((exp, index) => (
           <BlurFade key={index} delay={delay * (2.25 + index * 0.1)}>
             <ExperienceCard
               title={exp.title}

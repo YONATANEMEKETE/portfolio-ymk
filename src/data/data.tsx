@@ -136,7 +136,21 @@ export const skills = [
   'Progressive Web Apps (PWA)',
 ];
 
-export const projects = [
+interface Project {
+  title: string;
+  href?: string;
+  description: string;
+  tags: readonly string[];
+  link?: string;
+  image: string;
+  links?: readonly {
+    icon: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
+}
+
+export const projects: Project[] = [
   {
     title: 'Noted',
     href: 'https://noteed-1.vercel.app',
@@ -153,7 +167,7 @@ export const projects = [
       'Reading Tools',
       'Prisma',
       'PostgreSQL',
-    ] as const,
+    ],
     link: 'https://noteed-1.vercel.app',
     image: '/noted-image.png',
     links: [
@@ -165,7 +179,7 @@ export const projects = [
       {
         icon: <GithubIcon />,
         type: 'GitHub',
-        href: 'https://github.com/YONATANEMEKETE/read-comp', // replace if needed
+        href: 'https://github.com/YONATANEMEKETE/read-comp',
       },
     ],
   },
@@ -184,17 +198,17 @@ export const projects = [
       'ATS',
       'Tiptap',
       'React PDF',
-    ] as const,
+    ],
     link: 'https://resume-tailor-zeta.vercel.app',
     image: '/og-image.png',
     links: [
       {
-        icon: <Globe />, // your icon component
+        icon: <Globe />,
         type: 'Live App',
         href: 'https://resume-tailor-zeta.vercel.app',
       },
       {
-        icon: <GithubIcon />, // your icon component
+        icon: <GithubIcon />,
         type: 'GitHub',
         href: 'https://github.com/YONATANEMEKETE/ResumeTailor',
       },
@@ -218,12 +232,12 @@ export const projects = [
     image: 'https://ik.imagekit.io/6qizpphtd1/Portfolio/753shots_so.png',
     links: [
       {
-        icon: <Globe />, // your icon component
+        icon: <Globe />,
         type: 'Live App',
         href: 'https://snap-build.vercel.app/',
       },
       {
-        icon: <GithubIcon />, // your icon component
+        icon: <GithubIcon />,
         type: 'GitHub',
         href: 'https://github.com/YONATANEMEKETE/SnapBuild',
       },
@@ -231,7 +245,6 @@ export const projects = [
   },
   {
     title: 'BuySignal',
-    // href: 'https://buysignal.io',
     description:
       'A conversion-boosting tool built with **React 19** and **Next.js 15** that helps business owners increase sales by displaying smart popups on their websites. Features a dashboard built with **React** components, **React Hook Form** for form handling, **Zod** validation, and **recharts** for analytics visualization.',
     tags: [
@@ -244,7 +257,6 @@ export const projects = [
       'React Hook Form',
       'zod',
     ],
-    // link: 'https://buysignal.io',
     image:
       'https://ik.imagekit.io/6qizpphtd1/buysignal/photo_2025-06-30_09-29-10.jpg?updatedAt=1753772240293',
   },
@@ -266,3 +278,37 @@ export const projects = [
       'https://ik.imagekit.io/6qizpphtd1/query.design/photo_2025-06-30_09-38-43.jpg?updatedAt=1753772323991',
   },
 ];
+
+export const content = {
+  hero: {
+    name: 'YONATANE.M',
+    title: 'Senior React Frontend Developer',
+    tagline: 'Building fast, scalable, and production-ready web applications.',
+  },
+  about: {
+    description: aboutDescription,
+  },
+  skills: {
+    items: skills,
+    categories: {
+      'Core': ['JavaScript', 'TypeScript', 'React.js', 'Next.js'],
+      'Styling': ['Tailwind.css', 'Sass', 'Shadcn UI', 'Framer Motion', 'GSAP'],
+      'State': ['Zustand', 'Redux Toolkit', 'Jotai', 'TanStack Query'],
+      'APIs': ['RESTful APIs', 'GraphQL', 'React Hook Form', 'Zod'],
+      'Testing': ['Jest', 'Vitest', 'React Testing Library', 'Cypress', 'Playwright'],
+      'Tools': ['Vite', 'Vercel', 'Git', 'GitHub', 'Figma'],
+    },
+  },
+  experience: {
+    items: experiences,
+  },
+  projects: {
+    items: projects,
+    description: 'A collection of production-ready applications built with React and Next.js',
+  },
+  contact: {
+    links: navs,
+    description: 'Want to chat? Feel free to reach out via email, Linkedin, or any of the social media platforms below.',
+    copyright: 'Yonatane Mekete',
+  },
+};

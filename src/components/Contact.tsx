@@ -1,7 +1,7 @@
 import React from 'react';
 import { BlurFade } from './ui/blur-fade';
 import { TechnicalSection } from './ui/technical-section';
-import { navs } from '@/data/data';
+import { content } from '@/data/data';
 import Link from 'next/link';
 import { Plus } from './ui/plus';
 
@@ -24,8 +24,7 @@ const Contact = ({ delay }: Props) => {
 
         <BlurFade delay={delay * 2.25}>
           <p className="max-w-md mx-auto text-zinc-400 text-sm leading-relaxed uppercase tracking-wide">
-            Want to chat? Feel free to reach out via email, Linkedin, or any
-            of the social media platforms below.
+            {content.contact.description}
           </p>
         </BlurFade>
 
@@ -37,7 +36,7 @@ const Contact = ({ delay }: Props) => {
             <Plus className="-bottom-2 -right-2 opacity-40" delay={delay * 2.9} />
             
             <div className="flex flex-wrap justify-center gap-4">
-              {navs.map((nav, idx) => {
+              {content.contact.links.map((nav, idx) => {
                 const Icon = nav.icon;
                 return (
                   <Link
@@ -61,7 +60,7 @@ const Contact = ({ delay }: Props) => {
 
         <BlurFade delay={delay * 2.75}>
           <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600 mt-12">
-            © {new Date().getFullYear()} Yonatane Mekete — Built with React & Next.js
+            © {new Date().getFullYear()} {content.contact.copyright} — Built with React & Next.js
           </p>
         </BlurFade>
       </div>
