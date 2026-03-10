@@ -14,7 +14,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { Plus as PlusIcon } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 interface Props {
   title: string;
@@ -89,7 +89,7 @@ export function ProjectCard({
         {video && (
           <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <div className="flex size-14 items-center justify-center rounded-full border border-white/30 bg-zinc-950/60 text-white shadow-lg">
-              <PlusIcon className="size-6" />
+              <Play className="size-6" />
             </div>
           </div>
         )}
