@@ -149,6 +149,10 @@ export const projects: Project[] = [
     tags: ['Next.js', 'PWA', 'Prisma', 'PostgreSQL'],
     link: 'https://noteed-1.vercel.app',
     image: '/noted-image.png',
+    video: {
+      url: 'https://youtu.be/C7ieIwz_9sA',
+      title: 'Noted Project Demo',
+    },
     links: [
       {
         icon: <Globe />,
@@ -170,6 +174,10 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Shadcn', 'Architecture'],
     link: 'https://snap-build.vercel.app/',
     image: 'https://ik.imagekit.io/6qizpphtd1/Portfolio/753shots_so.png',
+    video: {
+      url: 'https://youtu.be/yrc7sRlBB3I',
+      title: 'SnapBuild Project Demo',
+    },
     links: [
       {
         icon: <Globe />,
@@ -192,6 +200,10 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'AI Integration'],
     link: 'https://resume-tailor-zeta.vercel.app',
     image: '/og-image.png',
+    video: {
+      url: 'https://youtu.be/0QrcYbCWpYA',
+      title: 'Resume Tailor AI Project Demo',
+    },
     links: [
       {
         icon: <Globe />,
@@ -258,4 +270,3 @@ export const content = {
     copyright: 'Yonatane Mekete',
   },
 };
-
