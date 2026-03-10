@@ -11,6 +11,10 @@ interface ProjectContent {
     tags: readonly string[];
     link?: string;
     image: string;
+    video?: {
+      url: string;
+      title?: string;
+    };
     links?: readonly {
       icon: React.ReactNode;
       type: string;
@@ -54,6 +58,7 @@ const Projects = ({ content }: Props) => {
               description={project.description}
               tags={project.tags}
               image={project.image}
+              video={project.video}
               links={project.links}
               className={id === 0 ? "min-h-[400px]" : "min-h-[350px]"}
             />

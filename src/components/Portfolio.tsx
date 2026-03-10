@@ -41,6 +41,10 @@ interface Content {
       tags: readonly string[];
       link?: string;
       image: string;
+      video?: {
+        url: string;
+        title?: string;
+      };
       links?: readonly {
         icon: React.ReactNode;
         type: string;

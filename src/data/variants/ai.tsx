@@ -92,6 +92,7 @@ export interface Project {
   tags: readonly string[];
   link?: string;
   image: string;
+  video?: { url: string; title?: string };
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -237,3 +238,4 @@ export const content = {
     copyright: 'Yonatane Mekete',
   },
 };
+
