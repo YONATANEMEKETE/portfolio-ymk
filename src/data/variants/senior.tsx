@@ -43,9 +43,31 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: 'Senior Frontend Developer – Zulu Tech',
+    title: 'Senior Frontend Developer – BLIH',
     bulletPoints: [
-      'Led frontend architecture using **Next.js**, **TypeScript**, and scalable component systems',
+      'Led frontend architecture and delivery across three completed products: **Lionstone Distribution** website, **BlihOps** website, and the **BLIH System** platform',
+      'Built and shipped **Next.js 16** + **React 19** applications with **TypeScript** and **Tailwind CSS** for marketing, lead intake, and admin workflows',
+      'Designed reusable component systems that improved consistency and accelerated feature delivery across multiple codebases',
+      'Implemented performance optimizations including **code splitting**, optimized routing, and **SEO-focused metadata structure**',
+      'Collaborated with cross-functional teams to translate product requirements into scalable frontend features',
+      'Integrated pilot/**RFQ submission flows** and admin review views for operational teams',
+      'Mentored developers on maintainable, product-aligned frontend practices',
+    ],
+    dates: 'Oct 2025 - Present',
+    location: 'Remote',
+    image: '/blih.jpg',
+    links: [
+      {
+        icon: <LinkedinIcon />,
+        title: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/blihmarketing/posts/?feedView=all',
+      },
+    ],
+  },
+  {
+    title: 'Frontend Developer – Zulu Tech',
+    bulletPoints: [
+      'Worked on frontend architecture using **Next.js**, **TypeScript**, and scalable component systems',
       'Defined rendering strategies and optimized performance through code splitting and caching',
       'Improved maintainability by introducing modular design patterns and reusable UI systems',
       'Collaborated with backend teams to align API contracts and frontend data layers',
@@ -141,6 +163,7 @@ export interface Project {
 
 export const projects: Project[] = [
   // PRIORITY: architecture-heavy projects first
+
   {
     title: 'Noted',
     href: 'https://noteed-1.vercel.app',

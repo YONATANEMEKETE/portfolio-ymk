@@ -45,9 +45,31 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: 'Senior Frontend Developer – Zulu Tech',
+    title: 'Senior Frontend Developer – BLIH',
     bulletPoints: [
-      'Led frontend architecture and product implementation for a large-scale web application using **Next.js**, **TypeScript**, and **Shadcn UI**',
+      'Led frontend architecture and delivery across three completed products: **Lionstone Distribution** website, **BlihOps** website, and the **BLIH System** platform',
+      'Built and shipped **Next.js 16** + **React 19** applications with **TypeScript** and **Tailwind CSS** for marketing, lead intake, and admin workflows',
+      'Designed reusable component systems that improved consistency and accelerated feature delivery across multiple codebases',
+      'Implemented performance optimizations including **code splitting**, optimized routing, and **SEO-focused metadata structure**',
+      'Collaborated with cross-functional teams to translate product requirements into scalable frontend features',
+      'Integrated pilot/**RFQ submission flows** and admin review views for operational teams',
+      'Mentored developers on maintainable, product-aligned frontend practices',
+    ],
+    dates: 'Oct 2025 - Present',
+    location: 'Remote',
+    image: '/blih.jpg',
+    links: [
+      {
+        icon: <LinkedinIcon />,
+        title: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/blihmarketing/posts/?feedView=all',
+      },
+    ],
+  },
+  {
+    title: 'Frontend Developer – Zulu Tech',
+    bulletPoints: [
+      'Worked on frontend architecture and product implementation for a large-scale web application using **Next.js**, **TypeScript**, and **Shadcn UI**',
       'Partnered with product managers to translate roadmap features into scalable frontend systems',
       'Designed reusable component architecture that improved development velocity and consistency',
       'Implemented performance optimizations including dynamic rendering strategies and code splitting',
