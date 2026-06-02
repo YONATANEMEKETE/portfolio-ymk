@@ -55,7 +55,7 @@ export const experiences: Experience[] = [
       'Integrated pilot/**RFQ submission flows** and admin review views for operational teams',
       'Mentored developers on maintainable, product-aligned frontend practices',
     ],
-    dates: 'Oct 2025 - Present',
+    dates: 'Oct 2025 - Feb 2026',
     location: 'Remote',
     image: '/blih.jpg',
     links: [
